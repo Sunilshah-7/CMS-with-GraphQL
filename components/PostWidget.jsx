@@ -3,7 +3,7 @@ import moment from 'moment'
 import Link from 'next/link'
 import { getRecentPosts, getSimilarPosts } from '../services'
 
-const PostWidget = ({ categories, slug }: { categories: any; slug: any }) => {
+const PostWidget = ({ categories, slug }) => {
   const [relatedPosts, setRelatedPosts] = useState([])
 
   useEffect(() => {
@@ -22,7 +22,7 @@ const PostWidget = ({ categories, slug }: { categories: any; slug: any }) => {
       <h3 className="pb-4 mb-8 text-xl font-semibold border-b">
         {slug ? 'Related Posts' : 'Recent Posts'}
       </h3>
-      {relatedPosts.map((post: any) => (
+      {relatedPosts.map((post) => (
         <div className="flex items-center w-full mb-4" key={post.title}>
           <div className="flex-none w-16">
             <img
